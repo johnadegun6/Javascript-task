@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body{
+            background-color: gray
+        }
+
+        .container{
+            margin:auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;   
+        }
+
+        .wrapper{
+            width:400px;
+            height:auto;
+            padding:20px;
+        }
+
+        #sub-section{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            background-color: none;
+            margin-left: 20px;
+            margin-top: 5px;
+            text-align: center;
+        }
+
+
+        .bcontainer {
+            display: flex;
+            justify-content: space-between ;
+            list-style: none;
+            border-spacing: 4px;  
+        }
+
+
+        input {
+            width:95%;
+            padding: 10px;
+            border-radius: 16px;
+            border: 2px solid black;
+            margin-top:20px;
+        }
+
+        
+        input:active, input:focus{
+            outline:none;
+        }
+
+        button{
+            /* x, y */
+            padding: 20px 10px;
+            color:white;
+            width:100%;
+            background-color: rgb(43, 43, 206);
+            border-radius: 8px;
+            border: 0;
+            outline: none;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        button:hover{
+            background-color: rgb(104, 104, 237);
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div id="sub-section">
+        <img src="./assets/images/opay logo.png" alt="Logo" />
+        <h2>Transact<br><i>with ease</i>!</h2>
+    </div>
+    <div class="container">
+        <div class="wrapper">
+            <input id="name" type="text" placeholder="Enter your full name">
+            <input id="number" type="text" placeholder="Enter card number">
+            <input id="date" type="text" placeholder="Enter card expiry date">
+        <div class="bcontainer">
+            <input id="cvv" type="text" placeholder="Enter CVV">
+            <input id="pin" type="text" placeholder="Enter Pin">
+        </div>
+            <button onclick ="checkInput()">ENTER</button>
+            <p id="outLabel" style="font-size: 20px; font-weight:bold;"></p>
+        </div>
+    </div>
+
+
+
+    <script>
+
+        const checkInput=()=>{
+
+            const x = document.getElementById('name')
+
+            const y = document.getElementById('initial')
+
+            const label = document.getElementById('outLabel')
+
+            let x1 = parseInt(x.value);
+            let y1 = parseInt(y.value)
+
+            let result = x1 * y1 
+
+            label.innerText =  `The Index is: ${x1 * y1}`
+
+        }
+
+    </script>
+    <script>
+        function checkcor(){
+        const corBtn = document.getElementById;
+        const corNumber = document.getElementById('cardnumber');
+        if corValidation(corNumber.value){
+            corNumber.Style = "border-color: green";
+            corBtn.Style = "background-color: green";
+        else
+        corNumber.Style = "border-color: red";
+        corBtn.Style = "background-color: red";
+
+        }
+
+        }
+    </script>
+</body>
+</html>
